@@ -1,1 +1,25 @@
 // Заголовки, общие БЄМ блоки и прочее...
+.button {
+	padding: toRem(22) toRem(37);
+	border-radius: 0.625rem;
+	background: linear-gradient(90deg, #67310A -108.98%, #F0D683 129.77%);
+	color: #000;
+	font-family: Oranienbaum;
+	font-size: 1.25rem;
+	font-style: normal;
+	line-height: 120%; /* 24px */
+	letter-spacing: 0.0625rem;
+	text-transform: uppercase;
+	transition: color 0.3s;
+	&::before{
+		content:'';
+		position: absolute;
+		border-radius: 0.5rem;
+		border: 0.0625rem solid #9F734C;
+		width: 95.81749%; /* 252/263 */
+		height: 88.235294%; /* 60/68 */
+		left: 50%;
+		top: 50%;
+		transform: translate(-50% -50%);
+	}
+}
