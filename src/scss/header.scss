@@ -1,0 +1,101 @@
+.header {
+	background: #010E0F;
+	// filter: blur(2px);
+	color: $maingold;
+	&__container {
+		padding-block: toRem(25);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media (max-width:1050px){
+			 flex-direction: column; 
+			 row-gap: 3.125rem;
+		}
+	}
+
+	&__logo {
+		display: flex;
+		gap: toRem(25);
+		@media (max-width:$mobileSmall){
+			 flex-direction: column;
+			 row-gap: toRem(20); 
+		}
+	}
+
+	&__logo-img {
+	}
+
+	&__logo-text {
+		max-width: toRem(199);
+		font-size: toRem(14);
+		line-height: 1.2;
+	}
+
+	&__actions {
+		display: flex;
+		align-items: center;
+		// column-gap: toRem(74);
+		@include adaptiveValue("column-gap", 74, 20,0);
+		@media (max-width:$mobile){
+			 flex-direction: column;
+			 row-gap: toRem(20); 
+		}
+	}
+}
+.actions-header {
+
+	&__item {
+		
+		&_social {
+			display: flex;
+			align-items: center;
+			column-gap: toRem(20);
+		}
+		&_tel {
+			text-align: right;
+			@media (max-width:$mobile){
+				 text-align: center; 
+			}
+		}
+	}
+
+	&__email-title {
+		display: block;
+		color: #767676;
+		font-size: toRem(14);
+		line-height: 1.4;
+	}
+
+	&__link {
+		display: inline-block;
+		position: relative;
+		font-size: toRem(14);
+		line-height: 1.4;
+		transition: color 0.3s;
+		&::after{
+			content:'';
+			position: absolute;
+			left: 0;
+			top: 110%;
+			width: 100%;
+			height: 0.0625rem;
+			background: url('@img/header/Line 2.svg') 0 0 no-repeat;
+		}
+		&:hover{
+			color: white;
+		}
+	}
+
+	&__social-link {
+		
+	}
+
+	&__tel-title {
+		display: block;
+		font-family: Oranienbaum;
+		font-size: toRem(20);
+		text-transform: uppercase;
+		color: white;
+		letter-spacing: toRem(1);
+	}
+}
