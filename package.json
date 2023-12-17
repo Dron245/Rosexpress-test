@@ -34,6 +34,7 @@
 		"eslint-plugin-react": "latest",
 		"eslint-plugin-react-hooks": "latest",
 		"eslint-plugin-react-refresh": "latest",
+		"exports-loader": "^4.0.0",
 		"file-include-webpack-plugin-replace": "latest",
 		"file-loader": "^6.2.0",
 		"gulp": "latest",
@@ -84,10 +85,13 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
+		"animate.css": "^4.1.1",
+		"aos": "^2.3.4",
 		"gulp-cheerio": "^1.0.0",
 		"isotope-layout": "^3.0.6",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"simplebar": "latest"
+		"simplebar": "latest",
+		"wow.js": "^1.2.2"
 	}
 }

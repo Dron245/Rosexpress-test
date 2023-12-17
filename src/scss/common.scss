@@ -1,8 +1,30 @@
 // Заголовки, общие БЄМ блоки и прочее...
-.button {
-	padding: toRem(22) toRem(37);
-	border-radius: 0.625rem;
+.button__wrapper {
+	display: inline-block;
+	position: relative;
+	padding: toRem(4) toRem(5);
+	border-radius: 10px;
 	background: linear-gradient(90deg, #67310A -108.98%, #F0D683 129.77%);
+	cursor: pointer;
+	&:hover{
+		background: #F0D683;
+		& .button {
+			background: #F0D683;
+		}
+	}
+}
+
+.button {
+	cursor: pointer;
+	padding: toRem(18) toRem(32);
+	display: flex;
+	align-items: center;
+	$border:1px;
+	position: relative;
+	border-radius: 8px;
+	border: $border solid transparent;
+	background: linear-gradient(90deg, #67310A -108.98%, #F0D683 129.77%);
+	background-clip: padding-box; /* !importanté */
 	color: #000;
 	font-family: Oranienbaum;
 	font-size: 1.25rem;
@@ -10,16 +32,24 @@
 	line-height: 120%; /* 24px */
 	letter-spacing: 0.0625rem;
 	text-transform: uppercase;
-	transition: color 0.3s;
+	transition: background-color 0.3s;
 	&::before{
 		content:'';
 		position: absolute;
-		border-radius: 0.5rem;
-		border: 0.0625rem solid #9F734C;
-		width: 95.81749%; /* 252/263 */
-		height: 88.235294%; /* 60/68 */
-		left: 50%;
-		top: 50%;
-		transform: translate(-50% -50%);
+		top: 0; right: 0; bottom: 0; left: 0;
+		background: url('@img/main/border.png') center / cover no-repeat;
+	}
+}
+
+.title {
+	font-family: Oranienbaum;
+	@include adaptiveValue("font-size", 40, 30);
+	// font-style: normal;
+	// font-weight: 400;
+	line-height: 130%;
+	letter-spacing: 1.2px;
+	text-transform: uppercase;
+	span {
+		color: $maingold;
 	}
 }
